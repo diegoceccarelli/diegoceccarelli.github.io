@@ -1,0 +1,130 @@
+1	amphore
+2	zeus
+3	cratere
+4	europe
+5	mozart
+6	leipzig
+7	paris
+8	goethe
+9	athena
+10	oenochoe
+11	picasso
+12	music
+13	india
+14	shakespeare
+15	film
+16	apollon
+17	achille
+18	varna
+19	ulysse
+20	bach
+21	poseidon
+22	louvre
+23	berlin
+24	beethoven
+25	maps
+26	monet
+27	zoologie
+28	europa
+29	leonardo
+30	hugo
+31	books
+32	hitler
+33	dali
+34	ireland
+35	portugal
+36	komponist
+37	dante
+38	germany
+39	map
+40	napoleon
+41	newton
+42	greece
+43	cervantes
+44	bible
+45	atena
+46	oenoche
+47	rubens
+48	france
+49	johann
+50	danzig
+51	wolfgang amadeus mozart or mozart
+52	une oenochoe and poseidon
+53	shakespeare romeo and julia
+54	don quijote de la manch
+55	leonardo da vinci mona lisa
+56	le rouge et le noir
+57	notre dame de paris
+58	livre de dessins chinois
+59	les fleurs du mal
+60	biblioteca nacional de espana
+61	mona lisa da vinci
+62	london college of fashion
+63	islas baleares and granada
+64	un atelier de potier
+65	carlo duca di calabria
+66	philosophiae naturalis principia mathematica
+67	mary queen of scots
+68	zentral und landesbibliothek berlin
+69	verdi 78 upm schallplatt
+70	san diego de alcala
+71	calderon de la barca
+72	panorama olesnicka 1997 nr 23
+73	les delices de la belgique
+74	france illustrated thomas allom
+75	la liberte guidant le peuple
+76	herzog anton ulrich museum
+77	dieux et heros grecs
+78	bibliotheque nationale de france
+79	afonso v de portugal
+80	victor hugo les miserable
+81	ulysse et les sirenes
+82	guerra de la independencia
+83	castillo de san phelipe
+84	porcelaine tendre de chantilly
+85	manzoni i promessi sposi
+86	magna carta the british library
+87	le comte de monte cristo
+88	johannes vermeer van delft
+89	johann georg ii von sachsen
+90	jean de la fontaine
+91	ile de la reunion
+92	santa rosa de lima
+93	le loup et l'agneau
+94	la femme qui pleure
+95	joseph mallord william turner
+96	johann wolfgang von goethe
+97	muros de san pedro
+98	leonardo da vinci louvre
+99	le nozze di figaro
+100	isaac newton and principia
+101	achille tue la reine des amazones
+102	lithuania or lietuva or litva or litwa
+103	little orphan mary and the gnomes
+104	resolution prise de faire la guerre
+105	archaeological survey of india collections india office series | indian architecture |
+106	art nouveau or jugendstil or secesja or secese or sezessionsstil or stile floreale or stile liberty
+107	brothers grimm or lewis carroll or hans christian andersen
+108	galileo or copernicus or tycho brahe or johannes kepler or astronomy
+109	archaeological survey of india collections or archaeological survey of india collections
+110	twodimensional nonprojectable graphic or twodimensional nonprojectable graphic
+111	archaeological survey of india collections india office series | indian architecture ||archaeological survey of india collections india office series | indian architecture |
+112	diccionario historico portatil de las ordenes religiosas
+113	royal commission on the ancient and historical monuments of scotland
+114	manufacture de ceramiques decoratives de hasselt
+115	tutti i madrigali di cipriano de rore a quattro voci
+116	tableau historique et politique des operations militaires et civiles de bonaparte
+117	some observations made in travelling france
+118	scenes from the life and passion of christ and of the virgin
+119	relacion diaria de todo lo sucedido en madrid
+120	real sociedad bascongada de los amigos del pais
+121	rapin and comparaison de demosthene et de ciceron
+122	novi commentarii academiae scientiarum imperialis petropolitanae
+123	notices biographiques sur les ingenieurs des ponts et chaussees depuis la creation du corps en 1716 jusqu'a nos jours
+124	memorias de la real academia de la historia 1796
+125	manifestation de 1956 a berlin contre l'intervention sovietique en hongrie
+126	ideology and ideological apparatuses of the state excerpt in media and cultural studies
+127	historia de la ultima guerra entre inglaterra esyados unidos francia espana holanda
+128	francisco libro de descripcion de verdaderos retratos de ilustres y memorables varones
+129	william makepeace 1600s burned at the stake
+130	vincent van gogh vase of flower with coffeepot and fruits

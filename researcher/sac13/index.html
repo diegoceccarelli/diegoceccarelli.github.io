@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>SSSS</title>
+    <meta name="description" content="A simple monospaced resume theme for Hugo.">
+    <meta name="author" content='Olivier Roques'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="/diegoceccarelli.github.io/sass/researcher.min.css">
+
+    
+        <link rel="icon" type="image/ico" href="diegoceccarelli.github.io/favicon.ico">
+    
+
+    
+        
+    
+</head>
+
+    <body><div class="container mt-5">
+    <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
+        <a class="navbar-brand mx-0 mr-sm-auto" href="diegoceccarelli.github.io">Diego Ceccarelli</a>
+        <div class="navbar-nav flex-row flex-wrap justify-content-center">
+            
+                
+                
+                    <a class="nav-item nav-link" href="diegoceccarelli.github.io/about">
+                        About
+                    </a>
+                    
+                        <span class="nav-item navbar-text mx-1">/</span>
+                    
+                
+                    <a class="nav-item nav-link" href="diegoceccarelli.github.io/snippets">
+                        Snippets
+                    </a>
+                    
+                
+            
+        </div>
+    </nav>
+</div>
+<hr>
+<div id="content">
+<div class="container">
+    <h2 id="semantic-search-shortcuts-dataset">Semantic Search Shortcuts Dataset</h2>
+<p>This dataset has been used to perform the experiments for the paper <a href="https://www.researchgate.net/publication/241687007_When_entities_meet_query_recommender_systems_semantic_search_shortcuts">When Entities Meet Query Recommender Systems: Semantic Search Shortcuts</a>.</p>
+<p>We build a dataset consisting in 130 queries extracted
+from the <a href="Europeana">http://www.europeana.eu</a>
+query logs, containing a sample of users&rsquo; interactions covering two
+years (from August 27, 2010 to January, 17, 2012).</p>
+<p>We split the dataset in three disjoint sets:</p>
+<ul>
+<li>The 50 queries in the first set are short (composed by only <strong>one</strong> term);</li>
+<li>The second set contains 50 queries having an average length of 4.2 terms;</li>
+<li>The 30 queries in the third set have an average length of 9.93 terms.</li>
+</ul>
+<p>For each query in the three sets, we compute the top-10 recommendations
+produced by the SS query recommender system (see the <a href="https://www.researchgate.net/publication/241687007_When_entities_meet_query_recommender_systems_semantic_search_shortcuts">paper</a>) for more details
+on the recommender) and we map them to entities by using a simple
+interface providing an user-friendly way to associate entities to queries.
+Three annotators participated to the manual annotation.
+They manually annotated queries and their related recommendations
+with one or more Wikipedia entities. An entity is represented by
+its title and its numerical id, available in a recent English Wikipedia dump, e.g.</p>
+<pre><code>  wikiName:Krater
+  id:1502187
+</code></pre><p>represents the entity described here <a href="http://en.wikipedia.org/wiki/Krater">http://en.wikipedia.org/wiki/Krater</a>.</p>
+<p>Queries are available <a href="/sac/queries.txt">here</a>: the
+file contains the flat list of the queries in the format:</p>
+<pre><code>	&lt;id&gt; &lt;tab&gt; &lt;query&gt; 
+</code></pre><p>of course, queries with <code>id in [1,50]</code> belong to the first set, queries with <code>id  \in [51, 100]</code> belong to the second set while the others belong to the third set.</p>
+<p>The annotated recommendations for the each query are
+available <a href="/sac/dataset.json">here</a>.
+Each line of this file represents the annotated recommendations for a query encoded
+using <em>json</em>.</p>
+<p>Each record contains a field <code>query</code>, which has a field <code>query</code> containing
+the raw query extracted from the logs and a field entities contains the
+list of entities associated by the annotators (each entity is represented by
+its <code>wikiname</code> and its <code>wiki-id</code>). The other field in the record is called
+<code>suggestions</code> and is made by a list of recommended queries, each one modelled
+as a map containing a field <code>query</code> with the raw query recommended, and
+a field <code>entities</code> with the entities associated by the annotators.</p>
+<h3 id="example">Example</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">
+{
+  <span style="color:#f92672">&#34;query&#34;</span>: {
+    <span style="color:#f92672">&#34;query&#34;</span>: <span style="color:#e6db74">&#34;amphore&#34;</span>,
+    <span style="color:#f92672">&#34;entities&#34;</span>: [
+      {
+        <span style="color:#f92672">&#34;wikiName&#34;</span>: <span style="color:#e6db74">&#34;Amphora&#34;</span>,
+        <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">51812</span>
+      }
+    ],
+    <span style="color:#f92672">&#34;suggestions&#34;</span>: [
+      {
+        <span style="color:#f92672">&#34;query&#34;</span>: <span style="color:#e6db74">&#34;amphore   hermes&#34;</span>,
+        <span style="color:#f92672">&#34;entities&#34;</span>: [
+          {
+            <span style="color:#f92672">&#34;wikiName&#34;</span>: <span style="color:#e6db74">&#34;Amphora&#34;</span>,
+            <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">51812</span>
+          },
+          {
+            <span style="color:#f92672">&#34;wikiName&#34;</span>: <span style="color:#e6db74">&#34;Hermes&#34;</span>,
+            <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">14410</span>
+          }
+        ]
+      },
+      {
+        <span style="color:#f92672">&#34;query&#34;</span>: <span style="color:#e6db74">&#34;amphore antigone&#34;</span>,
+        <span style="color:#f92672">&#34;entities&#34;</span>: [
+          {
+            <span style="color:#f92672">&#34;wikiName&#34;</span>: <span style="color:#e6db74">&#34;Amphora&#34;</span>,
+            <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">51812</span>
+          },
+          {
+            <span style="color:#f92672">&#34;wikiName&#34;</span>: <span style="color:#e6db74">&#34;Antigone&#34;</span>,
+            <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">67196</span>
+          }
+        ]
+      }
+    ]
+  }
+}
+
+</code></pre></div><p>contains two recommendations for the query <code>amphore</code> (associated to the
+entity <a href="http://en.wikipedia.org/wiki/Amphora">Amphora</a>. One is the query
+<code>amphore hermes</code> (associated to the entities <a href="http://en.wikipedia.org/wiki/Amphora">Amphora</a>
+and <a href="http://en.wikipedia.org/wiki/Hermes">Hermes</a>. The other is the
+query <code>amphore antigone</code> ( associated to the entities <a href="http://en.wikipedia.org/wiki/Amphora">Amphora</a> and <a href="http://en.wikipedia.org/wiki/Antigone">Antigone</a> ).</p>
+<p>Please if you use it in your paper cite:</p>
+<pre><code>@inproceedings{ceccarelli2013entities,
+    title={When Entities Meet Query Recommender Systems: Semantic Search Shortcuts},
+    author={Ceccarelli, D. and Gordea, S. and Lucchese, C. and Nardini, F.M. and Perego, R.},        
+    booktitle={SAC '13: 28th Symposium On Applied Computing, Coimbra, Portugal, March 2013},
+    year={2013}
+}
+</code></pre><p>Feel free to contact me via <a href="mailto:diego.ceccarelli@gmail.com">email</a> for more details.</p>
+<hr>
+<p>Licensed under the Apache License, Version 2.0 (the &lsquo;License&rsquo;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &lsquo;AS IS&rsquo; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+
+</div>
+
+        </div><div id="footer" class="mb-5">
+    
+        <hr>
+        <div class="container text-center">
+            <a href="https://github.com/ojroques/hugo-researcher"><small>By Olivier Roques</small></a>
+        </div>
+    
+</div>
+</body>
+</html>
