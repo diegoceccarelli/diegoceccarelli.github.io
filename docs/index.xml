@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Diego Ceccarelli</title>
+    <link>diegoceccarelli.github.io/</link>
+    <description>Recent content in About on Diego Ceccarelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="diegoceccarelli.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>diegoceccarelli.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>diegoceccarelli.github.io/about/</guid>
+      <description>About Me  Hi! My name is Diego and I&amp;rsquo;m a software engineer with academic experience in information retrieval and machine learning.
+Since 2015, I have been working for Bloomberg. I spent several years working on search &amp;amp; ranking financial news and I currently lead a team in the AI group.
+In a previous life I was a Post-Doctoral Fellow at the Institute for Advanced Studies of Lucca (IMT) and an Associate Researcher at the High Performance Computing Laboratory (HPC), National Research Council(CNR).</description>
+    </item>
+    
+    <item>
+      <title>Snippets</title>
+      <link>diegoceccarelli.github.io/snippets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>diegoceccarelli.github.io/snippets/</guid>
+      <description>Code Snippets This page contains a small collection of (mainly) bash commands that I discovered during the Ph.D. Bash is evil but during the Ph.D. was often useful to get stuff done quickly (and it is still useful today).
+[bash] print a beer icon in a script echo $&amp;#39;\360\237\215\272&amp;#39; or
+echo $&amp;#39;\360\237\215\270&amp;#39; echo $&amp;#39;\360\237\215\271&amp;#39; echo $&amp;#39;\360\237\215\273&amp;#39; echo $&amp;#39;\360\237\215\274&amp;#39; From http://codepoints.net/miscellaneous_symbols_and_pictographs
+[bash] copy the output of a command to the clipboard (on macosx) echo &amp;#34;pippo&amp;#34; | pbcopy Now cmd+v will paste pippo.</description>
+    </item>
+    
+    <item>
+      <title>SSSS</title>
+      <link>diegoceccarelli.github.io/sac13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>diegoceccarelli.github.io/sac13/</guid>
+      <description>Semantic Search Shortcuts Dataset This dataset has been used to perform the experiments for the paper When Entities Meet Query Recommender Systems: Semantic Search Shortcuts.
+We build a dataset consisting in 130 queries extracted from the http://www.europeana.eu query logs, containing a sample of users&amp;rsquo; interactions covering two years (from August 27, 2010 to January, 17, 2012).
+We split the dataset in three disjoint sets:
+ The 50 queries in the first set are short (composed by only one term); The second set contains 50 queries having an average length of 4.</description>
+    </item>
+    
+  </channel>
+</rss>

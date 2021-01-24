@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Snippets</title>
+    <meta name="description" content="A simple monospaced resume theme for Hugo.">
+    <meta name="author" content='Olivier Roques'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="/diegoceccarelli.github.io/sass/researcher.min.css">
+
+    
+        <link rel="icon" type="image/ico" href="diegoceccarelli.github.io/favicon.ico">
+    
+
+    
+        
+    
+</head>
+
+    <body><div class="container mt-5">
+    <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
+        <a class="navbar-brand mx-0 mr-sm-auto" href="diegoceccarelli.github.io">Diego Ceccarelli</a>
+        <div class="navbar-nav flex-row flex-wrap justify-content-center">
+            
+                
+                
+                    <a class="nav-item nav-link" href="diegoceccarelli.github.io/about">
+                        About
+                    </a>
+                    
+                        <span class="nav-item navbar-text mx-1">/</span>
+                    
+                
+                    <a class="nav-item nav-link" href="diegoceccarelli.github.io/snippets">
+                        Snippets
+                    </a>
+                    
+                
+            
+        </div>
+    </nav>
+</div>
+<hr>
+<div id="content">
+<div class="container">
+    <h2 id="code-snippets">Code Snippets</h2>
+<p>This page contains a small collection of (mainly) bash commands that I discovered during the Ph.D. Bash is evil but during the Ph.D. was often useful to get stuff done quickly (and it is still useful today).</p>
+<h3 id="bash-print-a-beer-icon-in-a-script">[bash] print a beer icon in a script</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    echo <span style="color:#e6db74">$&#39;\360\237\215\272&#39;</span>
+</code></pre></div><p>or</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    echo <span style="color:#e6db74">$&#39;\360\237\215\270&#39;</span>
+    echo <span style="color:#e6db74">$&#39;\360\237\215\271&#39;</span>
+    echo <span style="color:#e6db74">$&#39;\360\237\215\273&#39;</span>
+    echo <span style="color:#e6db74">$&#39;\360\237\215\274&#39;</span>
+</code></pre></div><p>From <a href="http://codepoints.net/miscellaneous_symbols_and_pictographs">http://codepoints.net/miscellaneous_symbols_and_pictographs</a></p>
+<h3 id="bash-copy-the-output-of-a-command-to-the-clipboard-on-macosx">[bash] copy the output of a command to the clipboard (on macosx)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    echo <span style="color:#e6db74">&#34;pippo&#34;</span> | pbcopy
+</code></pre></div><p>Now <code>cmd+v</code> will paste <code>pippo</code>.</p>
+<h3 id="bash-zcat-does-not-work-on-macos-z-bug">[bash] zcat does not work on MACOS (.Z bug)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">	sudo mv /usr/bin/zcat /usr/bin/broken-zcat
+	sudo ln -s /usr/bin/gzcat /usr/bin/zcat
+</code></pre></div><h3 id="bash-awk-insert-blank-line-every-n-lines">[bash] awk insert blank line every n lines</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    awk <span style="color:#e6db74">&#39;{ if ((NR % 5) == 0) printf(&#34;\n&#34;); print; }&#39;</span>
+</code></pre></div><p>For <code>n == 5</code>, of course. Substitute whatever your idea of <code>n</code> is.</p>
+<h3 id="bash-convert-windows-source-file-to-unix">[bash] convert windows source file to unix</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">	dos2unix *.py
+</code></pre></div><h3 id="bash-remove-first-column-from-a-file">[bash] remove first column from a file</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">	cut -f2- filename
+</code></pre></div><h3 id="bash-replace-delete-with-backspace-in-screen">[bash] replace delete with backspace in screen</h3>
+<p>You can define an alias in your <code>~/.bashrc</code> file like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  alias screen<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;TERM=screen screen&#39;</span>
+</code></pre></div><h3 id="bash-sort-using-tab-as-separator">[bash] sort using tab as separator</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  sort -t<span style="color:#e6db74">$&#39;\t&#39;</span> -k <span style="color:#ae81ff">2</span> file
+</code></pre></div><h3 id="java-change-java-heap-size">[java] change java heap size</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  java -Xmx&lt;size&gt; set maximum Java heap size
+</code></pre></div><p>e.g., <code>java -Xmx4196m Pippo</code></p>
+<h3 id="bash-resolve-redirected-url">[bash] resolve redirected url</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  URL<span style="color:#f92672">=</span>...
+  REDIRECT_URL<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>curl -w %<span style="color:#f92672">{</span>redirect_url<span style="color:#f92672">}</span> URL<span style="color:#66d9ef">)</span> 
+</code></pre></div><h3 id="bash-get-a-txt-file-edited-from-pirate-pad">[bash] get a txt file edited from pirate pad</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl http://piratepad.net/ep/pad/export/$id/latest?format<span style="color:#f92672">=</span>txt
+</code></pre></div><h3 id="bash-dump-a-website">[bash] dump a website</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget -r -H -l1 -k -P $targetdir --exclude-domains <span style="color:#e6db74">${</span>comma-seperated domain name<span style="color:#e6db74">}</span> --user<span style="color:#f92672">=</span>xxx --password<span style="color:#f92672">=</span>xxx $url
+</code></pre></div><h3 id="bash-get-a-webpage-with-autentication">[bash] get a webpage with autentication</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">url<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+outpage <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+user<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+pass<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+curl -u $user:$pass $url &gt;  $outpage
+</code></pre></div><h3 id="linux-10-nice-hints">[linux] 10 nice hints</h3>
+<p><a href="http://web.archive.org/web/20111229021312/http://www.ibm.com/developerworks/linux/library/l-10sysadtips/">http://web.archive.org/web/20111229021312/http://www.ibm.com/developerworks/linux/library/l-10sysadtips/</a></p>
+<h3 id="bash-how-to-get-the-sum-of-all-the-lines-in-the-file">[bash] how to get the sum of all the lines in the file</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#e6db74">&#39;{a+=$0}END{print a}&#39;</span> abc
+</code></pre></div><h3 id="python-remove-the-garbage-collector-in-python">[python] remove the garbage collector in python</h3>
+<p>When you are working with a big data structure in python the garbage
+collector can slow down the execution, sometime can make sense to disable it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">import gc
+gc.disable<span style="color:#f92672">()</span>
+</code></pre></div><h3 id="bash-how-to-query-solr-from-the-shell">[bash] how to query solr from the shell</h3>
+<p><a href="https://cwiki.apache.org/confluence/display/solr/Solrj#">https://cwiki.apache.org/confluence/display/solr/Solrj#</a></p>
+<p>&hellip; Or just use python and the package <a href="https://pypi.org/project/pysolr/">pysolr</a>.</p>
+<h3 id="bash-sum-rows-with-the-some-field">[bash] sum rows with the some field</h3>
+<p>dictionary in awk:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat nayan.out
+saman <span style="color:#ae81ff">1</span>
+gihan <span style="color:#ae81ff">2</span>
+saman <span style="color:#ae81ff">4</span>
+ravi <span style="color:#ae81ff">1</span>
+ravi <span style="color:#ae81ff">2</span>
+
+$ awk <span style="color:#e6db74">&#39;{arr[$1]+=$2} END {for (i in arr) {print i,arr[i]}}&#39;</span> nayan.out &gt; nayan.out.tmp
+
+$ cat nayan.out.tmp
+ravi <span style="color:#ae81ff">3</span>
+saman <span style="color:#ae81ff">5</span>
+gihan <span style="color:#ae81ff">2</span>
+</code></pre></div><h3 id="maven-resources-in-a-jar">[maven] resources in a jar</h3>
+<p><a href="http://stackoverflow.com/questions/1266615/maven-configuration-of-dependency-jar">http://stackoverflow.com/questions/1266615/maven-configuration-of-dependency-jar</a></p>
+<h3 id="bash-get-all-pdf-in-a-page">[bash] get all pdf in a page</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  wget -m --accept<span style="color:#f92672">=</span>pdf -nd  $url
+</code></pre></div><h3 id="bash-iterate-over-the-lines-of-a-jar">[bash] iterate over the lines of a jar</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">while</span> read line
+<span style="color:#66d9ef">do</span>
+echo $line
+<span style="color:#66d9ef">done</span> &lt; file_to_read
+</code></pre></div><h3 id="bash-remove-blank-lines-in-a-file">[bash] remove blank lines in a file</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grep -v <span style="color:#e6db74">&#39;^[[:space:]]*$&#39;</span>  file
+</code></pre></div><h3 id="bash-change-tmp-folder-where-sort-put-temporary-files">[bash] change tmp folder where sort put temporary files</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sort -T dir ...
+</code></pre></div><h3 id="bash-print-number-of-a-specific-char-for-each-line-of-a-file">[bash] print number of a specific char for each line of a file</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk -F<span style="color:#e6db74">&#39;#&#39;</span> <span style="color:#e6db74">&#39;{ print NF-1}&#39;</span> 
+</code></pre></div><p>It will print how many chars &lsquo;#&rsquo; per line</p>
+<h3 id="bash-replace-a-substring">[bash] replace a substring</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">i<span style="color:#f92672">=</span>pippo.txt
+echo <span style="color:#e6db74">${</span>i/txt/tex<span style="color:#e6db74">}</span>
+</code></pre></div><p>It will print <code>pippo.tex</code></p>
+<h3 id="bash-sort-on-more-than-one-field">[bash] sort on more than one field</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sort -k 1,1 -k 3,3nr file.tsv &gt; tmp
+</code></pre></div><p>It sorts on the first field and if two elements are equal on the first, on the third field in reverse integer order</p>
+<h3 id="bash-remove-all-files-of-size-0">[bash] remove all files of size 0</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -type f -size 0k -exec rm <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span> | awk <span style="color:#e6db74">&#39;{ print $8 }&#39;</span>
+</code></pre></div><h3 id="bash-remove-all-chars-in-a-particular-position-from-a-file">[bash] remove all chars in a particular position from a file</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cut -c42- file
+</code></pre></div><p>It removes the first 42 characters from all the lines of a file.</p>
+<h3 id="bash-view-what-is-appended-on-file">[bash] view what is appended on file</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tail -f file -n 
+</code></pre></div><h3 id="bash-get-words-distribution-from-a-file">[bash] get words distribution from a file</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat file | tr <span style="color:#e6db74">&#39;[A-Z]&#39;</span> <span style="color:#e6db74">&#39;[a-z]&#39;</span> | tr -sc <span style="color:#e6db74">&#39;[a-z]&#39;</span> <span style="color:#e6db74">&#39;\n&#39;</span> | grep -v <span style="color:#e6db74">&#39;^[^a-z]*$&#39;</span> | grep -v <span style="color:#e6db74">&#39;^[\]&#39;</span>  |    sort | grep -vxf topwords-ita.txt | uniq -c   | sort -nrk1
+</code></pre></div><h3 id="bash-tr-complement">[bash] tr complement</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tr -sc <span style="color:#e6db74">&#39;[a-zA-Z]&#39;</span> <span style="color:#e6db74">&#39;\n&#39;</span> &lt; file
+</code></pre></div><p>It replaces all chars that are <strong>not</strong> alphabetic in new lines</p>
+<h3 id="bash-remove-first-or-last-lines">[bash] remove first or last lines</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> sed <span style="color:#e6db74">&#39;1d&#39;</span> filename 
+</code></pre></div><p>To remove the first line</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> sed <span style="color:#e6db74">&#39;$d&#39;</span> filename 
+</code></pre></div><p>To remove the last line</p>
+<h3 id="bash-generate-all-the-couples-of-terms">[bash] Generate all the couples of terms</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tr -sc <span style="color:#e6db74">&#39;[a-zA-Z0-9\n]&#39;</span> <span style="color:#e6db74">&#39;\t&#39;</span>  &lt; inputFile | awk <span style="color:#e6db74">&#39;{for (i = 1; i &lt; NF; i++) print $i&#34;\t&#34;$(i+1); }&#39;</span>
+</code></pre></div><h3 id="bash-find-a-process-listening-on-a-particular-port">[bash] Find a process listening on a particular port</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo netstat -lpn | grep :8080
+</code></pre></div><h3 id="bash-check-for-proper-number-of-command-line-args">[bash] Check for proper number of command line args</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">EXPECTED_ARGS<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+E_BADARGS<span style="color:#f92672">=</span><span style="color:#ae81ff">65</span>
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -ne $EXPECTED_ARGS <span style="color:#f92672">]</span>
+<span style="color:#66d9ef">then</span>
+  echo <span style="color:#e6db74">&#34;Usage: `basename </span>$0<span style="color:#e6db74">` {arg}&#34;</span>
+  exit $E_BADARGS
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><h3 id="bash-sort-in-numeric-order-with-scientific-notation-allowed">[bash] Sort in numeric order with scientific notation allowed</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sort -g
+</code></pre></div><h3 id="bash-create-ssh-pub-key">[bash] create ssh pub key</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;ssh-keygen -t rsa -C <span style="color:#e6db74">&#34;your_email@example.com&#34;</span>
+<span style="color:#75715e"># Creates a new ssh key, using the provided email as a label</span>
+<span style="color:#75715e"># Generating public/private rsa key pair.</span>
+<span style="color:#75715e"># Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]</span>
+</code></pre></div><p>Now you need to enter a passphrase.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Enter passphrase <span style="color:#f92672">(</span>empty <span style="color:#66d9ef">for</span> no passphrase<span style="color:#f92672">)</span>: <span style="color:#f92672">[</span>Type a passphrase<span style="color:#f92672">]</span>
+<span style="color:#75715e"># Enter same passphrase again: [Type passphrase again]</span>
+</code></pre></div><p>Copy <code>id_rsa.pub</code> in <code>.ssh/authorized_key</code> to login on a remote machine without password.</p>
+<h3 id="bash-gzip-a-folder">[bash] gzip a folder</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  tar -czf folder_name.tar.gz folder_name/
+</code></pre></div><h3 id="git-change-the-commit-message">[git] change the commit message</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  git commit --amend -m <span style="color:#e6db74">&#34;New commit message&#34;</span>
+</code></pre></div><h3 id="git-undo-latest-commit-eg-if-you-commit--a--m-instead-of-commit--m">[git] undo latest commit (e.g., if you commit -a -m instead of commit -m)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  git reset --soft HEAD^
+</code></pre></div>
+</div>
+
+        </div><div id="footer" class="mb-5">
+    
+        <hr>
+        <div class="container text-center">
+            <a href="https://github.com/ojroques/hugo-researcher"><small>By Olivier Roques</small></a>
+        </div>
+    
+</div>
+</body>
+</html>

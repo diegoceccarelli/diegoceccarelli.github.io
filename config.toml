@@ -1,5 +1,6 @@
 title = "Diego Ceccarelli"
 baseURL = "diegoceccarelli.github.io"
+publishDir = "docs"
 theme = "researcher"
 disableKinds = ["taxonomy", "term"]
 enableEmoji = true
