@@ -1,5 +1,5 @@
 title = "Diego Ceccarelli"
-baseURL = "diegoceccarelli.github.io"
+baseURL = "https://diegoceccarelli.github.io"
 publishDir = "docs"
 theme = "researcher"
 disableKinds = ["taxonomy", "term"]
