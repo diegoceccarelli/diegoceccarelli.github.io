@@ -9,7 +9,7 @@ googleAnalytics = ""  # add your tracking id
 
 [params]
   author = "Olivier Roques"
-  description = "A simple monospaced resume theme for Hugo."
+  description = "Diego Ceccarelli is software engineer and a team lead at Bloomberg in London, UK. His work is mainly on Information Retrieval, Search, and Machine Learning problems. "
   favicon = "favicon.ico"  # path to a .ico to use as favicon
   [params.footer]
     text = "By Olivier Roques"

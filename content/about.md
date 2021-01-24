@@ -43,7 +43,7 @@ I enjoy contributing to open source in my spare time:
 
 In 2016, I contributed to the [release of the Learning to Rank module](https://www.techatbloomberg.com/blog/bloomberg-integrated-learning-rank-apache-solr/) of Apache Solr.  I also gave several talks explainining [how learning to rank works](https://lucidworks.com/post/learning-to-rank-solr/), [how to use the Apache Solr module](https://archive.fosdem.org/2019/schedule/event/learning_to_rank/), and problems that we faced at work when [we released learning to rank in production](https://www.youtube.com/watch?v=eMuepJpjUjI). 
 
-When in the mood I mantain [json-wikipedia](https://github.com/diegoceccarelli/json-wikipedia), a library to convert Wikipedia xml dumps into a json/avro semistructured format. 
+When I'm in the mood I mantain [json-wikipedia](https://github.com/diegoceccarelli/json-wikipedia), a library to convert Wikipedia xml dumps into a json/avro semistructured format. 
 
 
 
