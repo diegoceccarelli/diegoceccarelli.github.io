@@ -12,7 +12,7 @@ googleAnalytics = ""  # add your tracking id
   description = "Diego Ceccarelli is a software engineer and a team lead at Bloomberg in London, UK. His work is mainly on Information Retrieval, Search, and Machine Learning problems. "
   favicon = "favicon.ico"  # path to a .ico to use as favicon
   [params.footer]
-    text = "By Olivier Roques"
+    text = "Template by Olivier Roques"
     url = "https://github.com/ojroques/hugo-researcher"
 
 [permalinks]
