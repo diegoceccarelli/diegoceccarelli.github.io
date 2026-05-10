@@ -8,15 +8,15 @@ math = false          # enable KaTeX (https://katex.org/) globally
 googleAnalytics = ""  # add your tracking id
 
 [params]
-  author = "Olivier Roques"
-  description = "Diego Ceccarelli is a software engineer and a team lead at Bloomberg in London, UK. His work is mainly on Information Retrieval, Search, and Machine Learning problems. "
+  author = "Diego Ceccarelli"
+  description = "Diego Ceccarelli is an AI Engineering Manager at Bloomberg in London, UK, leading teams building production LLM applications, agentic search, and retrieval systems. PhD in Information Retrieval."
   favicon = "favicon.ico"  # path to a .ico to use as favicon
   [params.footer]
     text = "Template by Olivier Roques"
     url = "https://github.com/ojroques/hugo-researcher"
 
 [permalinks]
-  "/" = "/:filename"
+  "/" = "/:contentbasename"
 
 [menu]
   [[menu.main]]

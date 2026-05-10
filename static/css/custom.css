@@ -1,0 +1,25 @@
+.intro {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.intro img {
+    width: 220px;
+    flex-shrink: 0;
+    border-radius: 4px;
+}
+
+.intro > div {
+    padding-top: 2rem;
+}
+
+@media (max-width: 576px) {
+    .intro {
+        flex-direction: column;
+    }
+    .intro img {
+        width: 100%;
+    }
+}
