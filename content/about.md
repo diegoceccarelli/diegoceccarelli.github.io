@@ -34,7 +34,7 @@ In a previous life I was a Post-Doctoral Fellow at the [Institute for Advanced S
   * Ph.D. in Computer Science — Information Retrieval, University of Pisa, 2013. 20 peer-reviewed publications. ([Full pdf of the thesis](/thesis.pdf) - [Abstract](/abstract.pdf))
   * M.Sc. *cum laude* in Computer Science, University of Pisa, 2009.
   * B.Sc. *cum laude* in Computer Science, University of Pisa, 2006.
-  * Bachelor of Music in Flute Performance, [Musical Institute Pietro Mascagni](http://www.istitutomascagni.it), 2006.
+  * Bachelor of Music in Flute Performance, [Musical Institute Pietro Mascagni](https://www.consli.it/), 2006.
 
 ## Publications
 
